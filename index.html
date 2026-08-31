@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hasini</title>
+    
+    <!-- SEO & Open Graph Meta Tags -->
+    <meta name="description" content="Portfolio of Hasini, an Electronics and Communication Engineering graduate (2022-2026) specializing in Software Development and Data Analytics.">
+    <meta property="og:title" content="Hasini">
+    <meta property="og:description" content="Software Development Engineer and Data Analyst portfolio showcasing projects in Python, SQL, and Data Engineering.">
+    <meta property="og:type" content="website">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    
+    <!-- Google Fonts: Inter (Sans) and Fraunces (Serif) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <header id="header">
+        <nav class="container">
+            <div class="logo"><a href="#hero">HASINI</a></div>
+            <!-- Hamburger Menu Button -->
+            <button class="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#achievements">Certifications</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="container hero-section reveal">
+            <div class="hero-content">
+                <p class="greeting">Hi, I'm</p>
+                <h1 class="name">HASINI</h1>
+                <div class="cta-buttons">
+                    <!-- REPLACE: Add your resume PDF to the assets folder -->
+                    <a href="assets/Hasini_Resume.pdf" target="_blank" class="btn btn-secondary" aria-label="Download Resume">
+                        <i class="fa-solid fa-file-pdf"></i> Resume
+                    </a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="assets/passport_pic.png" alt="Profile Photo of Hasini" id="profile-img" loading="lazy">
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="container about-section reveal">
+            <div class="section-header">
+                <h2>About Me</h2>
+            </div>
+            <div class="about-content">
+                <p>
+                    Passionate Electronics and Communication Engineering student with a strong interest in technology and innovation. Actively developing expertise in software beyond the curriculum through hands-on projects and continuous learning, with the goal of creating practical, high-impact solutions.
+                </p>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="container education-section reveal">
+            <div class="section-header">
+                <h2>Education</h2>
+            </div>
+            <div style="max-width: 100%;">
+                <div class="edu-header">
+                    <h3><a href="https://www.amrita.edu/" target="_blank" style="color: inherit; text-decoration: underline; text-underline-offset: 4px;">Amrita Vishwa Vidyapeetham</a></h3>
+                    <span class="edu-year">2022 – 2026</span>
+                </div>
+                <p class="institution">Electronics and Communication Engineering</p>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="container skills-section reveal">
+            <div class="section-header">
+                <h2>Technical Skills</h2>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Languages</h3>
+                    <div class="badges">
+                        <span class="badge"><i class="fa-brands fa-python"></i> Python</span>
+                        <span class="badge"><i class="fa-solid fa-database"></i> SQL</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Core Concepts</h3>
+                    <div class="badges">
+                        <span class="badge">Object-Oriented Programming (OOP)</span>
+                        <span class="badge">Data Structures & Algorithms (DSA)</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Data & Analytics Tools</h3>
+                    <div class="badges">
+                        <span class="badge">Pandas / NumPy</span>
+                        <span class="badge">Tableau</span>
+                        <span class="badge">Power BI</span>
+                        <span class="badge">Matplotlib / Seaborn</span>
+                        <span class="badge">Excel</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Tools & Platforms</h3>
+                    <div class="badges">
+                        <span class="badge"><i class="fa-brands fa-git-alt"></i> Git</span>
+                        <span class="badge"><i class="fa-brands fa-github"></i> GitHub</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="container projects-section reveal">
+            <div class="section-header">
+                <h2>Featured Projects</h2>
+            </div>
+            <div class="projects-grid">
+                
+                <!-- Project 1 (Founder BI Assistant) -->
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3 class="project-title">Founder BI Assistant</h3>
+                        <p class="project-problem"><strong>Problem:</strong> Business data on monday.com is messy and difficult to query using their native GraphQL API.</p>
+                        <p class="project-outcome"><strong>Outcome:</strong> Built a conversational BI agent integrating DuckDB for in-memory SQL to profile boards, evaluate joins, and deliver reliable answers with source rows.</p>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Streamlit</span>
+                            <span class="tag">DuckDB</span>
+                            <span class="tag">LLMs</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://monday-data-agent.streamlit.app/" target="_blank" class="btn btn-small btn-primary" aria-label="View Live App for Founder BI Assistant"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live App</a>
+                            <a href="https://github.com/hasini30/skylark-bi-agent" target="_blank" class="btn btn-small btn-secondary" aria-label="View Source Code for Founder BI Assistant"><i class="fa-brands fa-github"></i> Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 (Marketing A/B Test) -->
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3 class="project-title">Marketing A/B Test Analysis</h3>
+                        <p class="project-problem"><strong>Problem:</strong> Needed to statistically verify if a new ad campaign genuinely outperformed a control group of 588K+ users without being misled by noise.</p>
+                        <p class="project-outcome"><strong>Outcome:</strong> Ran a chi-square test proving a statistically significant 43% relative lift (p &lt; 0.001), equating to an estimated $38K+ incremental revenue per 100K users.</p>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Pandas</span>
+                            <span class="tag">SciPy</span>
+                            <span class="tag">Matplotlib</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/hasini30/marketing-ab-test-analysis" target="_blank" class="btn btn-small btn-secondary" aria-label="View Source Code for Marketing A/B Test Analysis"><i class="fa-brands fa-github"></i> Code</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 3 (Social Media ETL) -->
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3 class="project-title">Social Media ETL Pipeline</h3>
+                        <p class="project-problem"><strong>Problem:</strong> Raw social media API data was unstructured and unusable for direct analytical reporting.</p>
+                        <p class="project-outcome"><strong>Outcome:</strong> Engineered an automated Python ETL pipeline to extract, clean with Pandas, and load data into structured CSVs, unlocking actionable SQL insights on engagement trends.</p>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Pandas</span>
+                            <span class="tag">SQL</span>
+                            <span class="tag">APIs</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/hasini30/social_media_etl_pipeline" target="_blank" class="btn btn-small btn-secondary" aria-label="View Source Code for Social Media ETL Pipeline"><i class="fa-brands fa-github"></i> Code</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        
+        <!-- Certifications Section -->
+        <section id="achievements" class="container achievements-section reveal">
+            <div class="section-header">
+                <h2>Certifications</h2>
+            </div>
+            <div class="achievements-grid">
+                <!-- Certificate 1 -->
+                <a href="https://www.hackerrank.com/certificates/e1faa25031a6" target="_blank" class="achievement-card" style="text-decoration: none; color: inherit; transition: transform 0.3s ease, box-shadow 0.3s ease;">
+                    <i class="fa-solid fa-database icon"></i>
+                    <div class="ach-content">
+                        <h4>SQL (Advanced)</h4>
+                        <p>HackerRank</p>
+                    </div>
+                </a>
+
+                <!-- Certificate 2 -->
+                <a href="https://www.credly.com/badges/3304b0ed-ba63-4ab7-8bdf-f384fb2b418e/linked_in_profile" target="_blank" class="achievement-card" style="text-decoration: none; color: inherit; transition: transform 0.3s ease, box-shadow 0.3s ease;">
+                    <i class="fa-brands fa-python icon"></i>
+                    <div class="ach-content">
+                        <h4>Python Essentials 1</h4>
+                        <p>Cisco</p>
+                    </div>
+                </a>
+
+                <!-- Certificate 3 -->
+                <a href="https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/9PBTqmSxAf6zZTseP/io9DzWKe3PTsiS6GG_9PBTqmSxAf6zZTseP_2f3onffMb9TXSYtee_1745313901064_completion_certificate.pdf" target="_blank" class="achievement-card" style="text-decoration: none; color: inherit; transition: transform 0.3s ease, box-shadow 0.3s ease;">
+                    <i class="fa-solid fa-chart-line icon"></i>
+                    <div class="ach-content">
+                        <h4>Data Analytics Job Simulation</h4>
+                        <p>Deloitte Australia (Forage)</p>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="container contact-section reveal">
+            <div class="section-header">
+                <h2>Get In Touch</h2>
+            </div>
+            <div class="contact-content">
+                <p>I'm currently looking for new opportunities. Whether you have a question or just want to say hi, I'll try my best to get back to you!</p>
+                <a href="mailto:nadellahasini@gmail.com" class="btn btn-primary mail-button" aria-label="Send an email to Hasini">Say Hello</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <div class="social-links">
+                <a href="mailto:nadellahasini@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+                <a href="https://github.com/hasini30" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/hasini-nadella30/" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+            <p class="copyright">Designed & Built by HASINI</p>
+        </div>
+    </footer>
+
+    <!-- Custom Script -->
+    <script src="script.js"></script>
+</body>
+</html>
