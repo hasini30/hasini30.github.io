@@ -22,22 +22,6 @@ body {
     overflow-x: hidden;
 }
 
-/* Gravity Garden Background */
-.gravity-garden {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    z-index: 0;
-    pointer-events: none;
-}
-
-header, main, footer {
-    position: relative;
-    z-index: 1;
-}
-
 /* Floating Background Visuals */
 body::before, body::after {
     content: '';
@@ -463,4 +447,20 @@ footer { padding: 40px 0; background: var(--paper); border-top: 1px solid var(--
     section:not(.hero-section) { padding: 10px 0; }
     
     .footer-content { flex-direction: column; text-align: center; }
+}
+
+/* Gravity Garden Background */
+#gravity-garden {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 0;
+    pointer-events: none;
+}
+
+main, footer {
+    position: relative;
+    z-index: 1;
 }
