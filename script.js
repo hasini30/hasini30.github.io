@@ -77,7 +77,7 @@ class GravityGarden {
             this.seeds.push(new Seed(e.clientX, e.clientY, this.canvas.height));
             
             // Limit trees to prevent lag
-            if (this.trees.length + this.seeds.length > 15) {
+            if (this.trees.length + this.seeds.length > 25) {
                 if (this.trees.length > 0) {
                     this.trees.shift();
                 }
