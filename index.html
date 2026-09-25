@@ -96,7 +96,7 @@
             </div>
             <div class="skills-grid">
                 <div class="skill-category">
-                    <h3>Languages</h3>
+                    <h3>Programming & Analysis</h3>
                     <div class="badges">
                         <span class="badge"><i class="fa-brands fa-python"></i> Python</span>
                         <span class="badge"><i class="fa-solid fa-database"></i> SQL</span>
@@ -105,25 +105,34 @@
                 <div class="skill-category">
                     <h3>Core Concepts</h3>
                     <div class="badges">
-                        <span class="badge">Object-Oriented Programming (OOP)</span>
-                        <span class="badge">Data Structures & Algorithms (DSA)</span>
+                        <span class="badge">OOP</span>
+                        <span class="badge">DBMS</span>
+                        <span class="badge">DSA</span>
                     </div>
                 </div>
                 <div class="skill-category">
-                    <h3>Data & Analytics Tools</h3>
+                    <h3>System Architecture</h3>
                     <div class="badges">
-                        <span class="badge">Pandas / NumPy</span>
-                        <span class="badge">Tableau</span>
-                        <span class="badge">Power BI</span>
-                        <span class="badge">Matplotlib / Seaborn</span>
-                        <span class="badge">Excel</span>
+                        <span class="badge">In-Memory DBs (DuckDB)</span>
+                        <span class="badge">APIs (GraphQL/REST)</span>
                     </div>
                 </div>
                 <div class="skill-category">
-                    <h3>Tools & Platforms</h3>
+                    <h3>AI & Prompt Engineering</h3>
                     <div class="badges">
-                        <span class="badge"><i class="fa-brands fa-git-alt"></i> Git</span>
-                        <span class="badge"><i class="fa-brands fa-github"></i> GitHub</span>
+                        <span class="badge">Agentic Workflows</span>
+                        <span class="badge">LLM Tool Calling</span>
+                        <span class="badge">Prompt Engineering</span>
+                        <span class="badge">Security Gateways</span>
+                    </div>
+                </div>
+                <div class="skill-category" style="grid-column: 1 / -1;">
+                    <h3>Project & Deployment</h3>
+                    <div class="badges">
+                        <span class="badge">Streamlit</span>
+                        <span class="badge"><i class="fa-brands fa-github"></i> Git/GitHub</span>
+                        <span class="badge">QA Testing</span>
+                        <span class="badge">Troubleshooting</span>
                     </div>
                 </div>
             </div>
@@ -136,54 +145,37 @@
             </div>
             <div class="projects-grid">
                 
-                <!-- Project 1 (Founder BI Assistant) -->
+                <!-- Project 1 (Conversational BI Agent) -->
                 <div class="project-card">
                     <div class="project-content">
-                        <h3 class="project-title">Founder BI Assistant</h3>
+                        <h3 class="project-title">Conversational BI Agent for monday.com</h3>
                         <p class="project-problem"><strong>Problem:</strong> Business data on monday.com is messy and difficult to query using their native GraphQL API.</p>
-                        <p class="project-outcome"><strong>Outcome:</strong> Built a conversational BI agent integrating DuckDB for in-memory SQL to profile boards, evaluate joins, and deliver reliable answers with source rows.</p>
+                        <p class="project-outcome"><strong>Outcome:</strong> Built a conversational AI agent using Python and Streamlit that enables executives to query live boards. Engineered a deterministic DuckDB profiling layer and a multi-step tool-calling loop (via OpenRouter) that self-recovers from syntax errors. Hardened the architecture with a read-only API gateway.</p>
                         <div class="project-tags">
                             <span class="tag">Python</span>
                             <span class="tag">Streamlit</span>
                             <span class="tag">DuckDB</span>
-                            <span class="tag">LLMs</span>
+                            <span class="tag">OpenRouter</span>
+                            <span class="tag">GraphQL</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://monday-data-agent.streamlit.app/" target="_blank" class="btn btn-small btn-primary" aria-label="View Live App for Founder BI Assistant"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live App</a>
-                            <a href="https://github.com/hasini30/skylark-bi-agent" target="_blank" class="btn btn-small btn-secondary" aria-label="View Source Code for Founder BI Assistant"><i class="fa-brands fa-github"></i> Code</a>
+                            <a href="https://monday-data-agent.streamlit.app/" target="_blank" class="btn btn-small btn-primary" aria-label="View Live App for Conversational BI Agent"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live App</a>
+                            <a href="https://github.com/hasini30/skylark-bi-agent" target="_blank" class="btn btn-small btn-secondary" aria-label="View Source Code for Conversational BI Agent"><i class="fa-brands fa-github"></i> Code</a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Project 2 (Marketing A/B Test) -->
-                <div class="project-card">
-                    <div class="project-content">
-                        <h3 class="project-title">Marketing A/B Test Analysis</h3>
-                        <p class="project-problem"><strong>Problem:</strong> Needed to statistically verify if a new ad campaign genuinely outperformed a control group of 588K+ users without being misled by noise.</p>
-                        <p class="project-outcome"><strong>Outcome:</strong> Ran a chi-square test proving a statistically significant 43% relative lift (p &lt; 0.001), equating to an estimated $38K+ incremental revenue per 100K users.</p>
-                        <div class="project-tags">
-                            <span class="tag">Python</span>
-                            <span class="tag">Pandas</span>
-                            <span class="tag">SciPy</span>
-                            <span class="tag">Matplotlib</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/hasini30/marketing-ab-test-analysis" target="_blank" class="btn btn-small btn-secondary" aria-label="View Source Code for Marketing A/B Test Analysis"><i class="fa-brands fa-github"></i> Code</a>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Project 3 (Social Media ETL) -->
+                <!-- Project 2 (Social Media ETL) -->
                 <div class="project-card">
                     <div class="project-content">
                         <h3 class="project-title">Social Media ETL Pipeline</h3>
                         <p class="project-problem"><strong>Problem:</strong> Raw social media API data was unstructured and unusable for direct analytical reporting.</p>
-                        <p class="project-outcome"><strong>Outcome:</strong> Engineered an automated Python ETL pipeline to extract, clean with Pandas, and load data into structured CSVs, unlocking actionable SQL insights on engagement trends.</p>
+                        <p class="project-outcome"><strong>Outcome:</strong> Engineered an automated Python ETL pipeline to extract, clean, and load 500+ posts into a MySQL database. Classified posts into sentiment categories (91.2% Neutral, 8.8% Negative). Discovered via complex SQL queries that Negative-sentiment posts drove ~5% higher average engagement.</p>
                         <div class="project-tags">
                             <span class="tag">Python</span>
-                            <span class="tag">Pandas</span>
                             <span class="tag">SQL</span>
-                            <span class="tag">APIs</span>
+                            <span class="tag">MySQL</span>
+                            <span class="tag">ETL</span>
                         </div>
                         <div class="project-links">
                             <a href="https://github.com/hasini30/social_media_etl_pipeline" target="_blank" class="btn btn-small btn-secondary" aria-label="View Source Code for Social Media ETL Pipeline"><i class="fa-brands fa-github"></i> Code</a>
@@ -226,6 +218,21 @@
                         <p>Deloitte Australia (Forage)</p>
                     </div>
                 </a>
+            </div>
+        </section>
+
+        <!-- Community Outreach Section -->
+        <section id="outreach" class="container outreach-section reveal">
+            <div class="section-header">
+                <h2>Community Outreach</h2>
+            </div>
+            <div style="max-width: 100%;">
+                <div class="edu-header">
+                    <h3>Mental Health Awareness</h3>
+                    <span class="edu-year">2024</span>
+                </div>
+                <p class="institution" style="color: var(--ink);">Karunagapally</p>
+                <p style="margin-top: 12px; color: var(--muted); max-width: 800px;">Delivered interactive mental health awareness sessions for 10th grade students at NSS HSS Karuvatta, in collaboration with subject experts.</p>
             </div>
         </section>
 
