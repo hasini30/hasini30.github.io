@@ -1,10 +1,11 @@
 :root {
-    --ink: #2c303a; /* Charcoal / near-black */
-    --paper: #faf8f5; /* Soft cream / off-white */
+    --ink: #faf8f5; /* Charcoal / near-black */
+    --paper: #000000; /* Soft cream / off-white */
     --accent: #334d5c; /* Muted navy accent */
-    --line: rgba(44, 48, 58, 0.15); /* Thin, subtle border */
-    --muted: #707580; /* Neutral muted text */
-    --surface-alt: rgba(51, 77, 92, 0.04); /* Faint accent tint for backgrounds */
+    --line: rgba(250, 248, 245, 0.15); /* Thin, subtle border */
+    --muted: #a0a5b0; /* Neutral muted text */
+    --surface-alt: rgba(250, 248, 245, 0.04);
+    --card-bg: #111111; /* Faint accent tint for backgrounds */
 }
 
 * { box-sizing: border-box; }
@@ -36,7 +37,7 @@ body::before {
     right: -10%;
     width: 60vw;
     height: 60vw;
-    background: radial-gradient(circle, rgba(51, 77, 92, 0.05) 0%, rgba(250, 248, 245, 0) 65%);
+    background: radial-gradient(circle, rgba(51, 77, 92, 0.05) 0%, rgba(0, 0, 0, 0) 65%);
     animation: floatBlob1 18s ease-in-out infinite alternate;
 }
 
@@ -45,7 +46,7 @@ body::after {
     left: -15%;
     width: 70vw;
     height: 70vw;
-    background: radial-gradient(circle, rgba(51, 77, 92, 0.035) 0%, rgba(250, 248, 245, 0) 65%);
+    background: radial-gradient(circle, rgba(51, 77, 92, 0.035) 0%, rgba(0, 0, 0, 0) 65%);
     animation: floatBlob2 22s ease-in-out infinite alternate;
 }
 
@@ -78,7 +79,7 @@ body::after {
 
 /* Navigation */
 header {
-    background: rgba(250, 248, 245, 0.95);
+    background: rgba(0, 0, 0, 0.95);
     backdrop-filter: blur(8px);
     border-bottom: 1px solid var(--line);
     position: sticky;
@@ -245,7 +246,7 @@ h2 {
 .education-card {
     max-width: 800px;
     padding: 32px;
-    background: #fff;
+    background: var(--card-bg);
     border: 1px solid var(--line);
     border-radius: 12px;
     box-shadow: 0 4px 20px rgba(0,0,0,0.02);
@@ -297,7 +298,7 @@ h2 {
 .skill-category { 
     padding: 32px; 
     border: 1px solid var(--line); 
-    background: #fff; 
+    background: var(--card-bg); 
     border-radius: 12px; 
     box-shadow: 0 4px 12px rgba(0,0,0,0.02); 
     transition: transform 0.3s ease, box-shadow 0.3s ease; 
@@ -335,7 +336,7 @@ h2 {
 .project-card { 
     display: flex; 
     flex-direction: column;
-    background: #ffffff; 
+    background: var(--card-bg); 
     border: 1px solid var(--line); 
     border-radius: 12px; 
     box-shadow: 0 4px 12px rgba(0,0,0,0.02); 
@@ -387,7 +388,7 @@ h2 {
     align-items: center;
     gap: 20px;
     padding: 24px;
-    background: #fff;
+    background: var(--card-bg);
     border: 1px solid var(--line);
     border-radius: 12px;
     transition: all 0.3s ease;
@@ -425,7 +426,7 @@ footer { padding: 40px 0; background: var(--paper); border-top: 1px solid var(--
         top: 80px;
         left: 0;
         right: 0;
-        background: rgba(250, 248, 245, 0.98);
+        background: rgba(0, 0, 0, 0.98);
         flex-direction: column;
         padding: 24px;
         gap: 20px;
