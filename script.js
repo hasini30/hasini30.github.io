@@ -19,26 +19,43 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Scroll Reveal Animations
+
+    // Standard Scroll Reveal Animations
     const revealElements = document.querySelectorAll('.reveal');
 
     const revealObserver = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('active');
-                // Optional: stop observing once revealed
                 observer.unobserve(entry.target);
             }
         });
     }, {
         root: null,
-        threshold: 0.1, // Trigger when 10% of the element is visible
+        threshold: 0.1,
         rootMargin: "0px 0px -50px 0px"
     });
 
     revealElements.forEach(el => {
         revealObserver.observe(el);
     });
+
+    // Dedicated About Section Horse & Follow Animation Trigger
+    const aboutSection = document.querySelector('.reveal-custom');
+    if (aboutSection) {
+        const aboutObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.15,
+            rootMargin: "0px 0px -40px 0px"
+        });
+        aboutObserver.observe(aboutSection);
+    }
 
     // Smooth Scrolling for anchor links (fallback for browsers not supporting CSS scroll-behavior)
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -56,6 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
 
 // --- Gravity Garden Background Animation ---
 class GravityGarden {
