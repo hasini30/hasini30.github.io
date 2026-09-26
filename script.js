@@ -40,6 +40,23 @@ document.addEventListener('DOMContentLoaded', () => {
         revealObserver.observe(el);
     });
 
+    // Initialize Horse Gallop Lottie Animation
+    const horseContainer = document.getElementById('horse-lottie-container');
+    let horseAnim = null;
+    if (horseContainer && typeof lottie !== 'undefined' && window.HORSE_LOTTIE_DATA) {
+        horseAnim = lottie.loadAnimation({
+            container: horseContainer,
+            renderer: 'svg',
+            loop: true,
+            autoplay: false,
+            animationData: window.HORSE_LOTTIE_DATA,
+            rendererSettings: {
+                preserveAspectRatio: 'xMidYMid meet'
+            }
+        });
+        horseAnim.setSpeed(1.8);
+    }
+
     // Dedicated About Section Horse & Follow Animation Trigger
     const aboutSection = document.querySelector('.reveal-custom');
     if (aboutSection) {
@@ -47,6 +64,9 @@ document.addEventListener('DOMContentLoaded', () => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('active');
+                    if (horseAnim) {
+                        horseAnim.play();
+                    }
                     observer.unobserve(entry.target);
                 }
             });
