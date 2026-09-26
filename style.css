@@ -478,7 +478,7 @@ main, footer {
 .about-track {
     position: relative;
     width: 100%;
-    min-height: 520px;
+    min-height: 580px;
     display: flex;
     align-items: center;
     overflow: visible;
@@ -532,9 +532,9 @@ main, footer {
     position: absolute;
     top: 50%;
     left: 0;
-    width: clamp(300px, 35vw, 440px);
+    width: clamp(480px, 46vw, 640px);
     aspect-ratio: 900 / 850;
-    transform: translateY(-50%) translateX(-480px);
+    transform: translateY(-50%) translateX(-680px);
     z-index: 3;
     pointer-events: none;
     overflow: visible;
@@ -555,13 +555,13 @@ main, footer {
 
 @keyframes horseRunAcross {
     0% {
-        transform: translateY(-50%) translateX(-480px);
+        transform: translateY(-50%) translateX(-680px);
     }
     45% {
-        transform: translateY(-50%) translateX(calc(50vw - 190px));
+        transform: translateY(-50%) translateX(calc(50vw - 280px));
     }
     100% {
-        transform: translateY(-50%) translateX(calc(100vw + 480px));
+        transform: translateY(-50%) translateX(calc(100vw + 680px));
     }
 }
 
@@ -578,18 +578,18 @@ main, footer {
         border-radius: 0 100px 100px 0;
     }
     .about-graphic {
-        width: 240px;
-        transform: translateY(-50%) translateX(-280px);
+        width: clamp(300px, 75vw, 400px);
+        transform: translateY(-50%) translateX(-420px);
     }
     @keyframes horseRunAcross {
         0% {
-            transform: translateY(-50%) translateX(-280px);
+            transform: translateY(-50%) translateX(-420px);
         }
         45% {
-            transform: translateY(-50%) translateX(calc(50vw - 120px));
+            transform: translateY(-50%) translateX(calc(50vw - 180px));
         }
         100% {
-            transform: translateY(-50%) translateX(calc(100vw + 280px));
+            transform: translateY(-50%) translateX(calc(100vw + 420px));
         }
     }
 }
