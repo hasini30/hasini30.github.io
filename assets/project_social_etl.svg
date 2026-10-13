@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0d1117"/>
+      <stop offset="100%" stop-color="#161b22"/>
+    </linearGradient>
+    <linearGradient id="orange2" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#f78166"/>
+      <stop offset="100%" stop-color="#ff8a65"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#bg2)"/>
+  <g stroke="rgba(255,255,255,0.04)" stroke-width="1">
+    <line x1="0" y1="90" x2="800" y2="90"/><line x1="0" y1="180" x2="800" y2="180"/><line x1="0" y1="270" x2="800" y2="270"/><line x1="0" y1="360" x2="800" y2="360"/>
+    <line x1="160" y1="0" x2="160" y2="450"/><line x1="320" y1="0" x2="320" y2="450"/><line x1="480" y1="0" x2="480" y2="450"/><line x1="640" y1="0" x2="640" y2="450"/>
+  </g>
+  <!-- Pipeline Nodes -->
+  <rect x="55" y="70" width="190" height="115" rx="14" fill="#161b22" stroke="#30363d" stroke-width="2"/>
+  <text x="150" y="108" fill="#58a6ff" font-family="monospace" font-size="14" font-weight="bold" text-anchor="middle">1. EXTRACT</text>
+  <text x="150" y="135" fill="#c9d1d9" font-family="sans-serif" font-size="13" text-anchor="middle">Public REST API</text>
+  <text x="150" y="158" fill="#8b949e" font-family="monospace" font-size="11" text-anchor="middle">500+ Social Posts</text>
+
+  <path d="M245 127 L305 127" stroke="#f78166" stroke-width="3" stroke-dasharray="5,5"/>
+  <polygon points="305,122 315,127 305,132" fill="#f78166"/>
+
+  <rect x="315" y="70" width="190" height="115" rx="14" fill="#161b22" stroke="#f78166" stroke-width="2"/>
+  <text x="410" y="108" fill="#f78166" font-family="monospace" font-size="14" font-weight="bold" text-anchor="middle">2. TRANSFORM</text>
+  <text x="410" y="135" fill="#c9d1d9" font-family="sans-serif" font-size="13" text-anchor="middle">Python &amp; Pandas</text>
+  <text x="410" y="158" fill="#22c55e" font-family="monospace" font-size="11" text-anchor="middle">0 Nulls / 0 Duplicates</text>
+
+  <path d="M505 127 L555 127" stroke="#f78166" stroke-width="3" stroke-dasharray="5,5"/>
+  <polygon points="555,122 565,127 555,132" fill="#f78166"/>
+
+  <rect x="565" y="70" width="180" height="115" rx="14" fill="#161b22" stroke="#30363d" stroke-width="2"/>
+  <text x="655" y="108" fill="#22c55e" font-family="monospace" font-size="14" font-weight="bold" text-anchor="middle">3. LOAD &amp; SQL</text>
+  <text x="655" y="135" fill="#c9d1d9" font-family="sans-serif" font-size="13" text-anchor="middle">MySQL Database</text>
+  <text x="655" y="158" fill="#8b949e" font-family="monospace" font-size="11" text-anchor="middle">15+ Analytical Queries</text>
+
+  <!-- Bottom Analytics Summary Card -->
+  <rect x="55" y="225" width="690" height="170" rx="14" fill="#161b22" stroke="#30363d" stroke-width="2"/>
+  <text x="90" y="265" fill="#c9d1d9" font-family="sans-serif" font-size="15" font-weight="bold">Sentiment &amp; Engagement SQL Findings</text>
+  <!-- Progress Bar Neutral -->
+  <text x="90" y="298" fill="#8b949e" font-family="sans-serif" font-size="12">Neutral Sentiment (91.2%)</text>
+  <rect x="90" y="308" width="340" height="14" rx="7" fill="#21262d"/>
+  <rect x="90" y="308" width="310" height="14" rx="7" fill="#58a6ff"/>
+  <!-- Progress Bar Negative -->
+  <text x="90" y="348" fill="#8b949e" font-family="sans-serif" font-size="12">Negative Sentiment (8.8%)</text>
+  <rect x="90" y="358" width="340" height="14" rx="7" fill="#21262d"/>
+  <rect x="90" y="358" width="45" height="14" rx="7" fill="#f78166"/>
+  <!-- Highlight Metric Box -->
+  <rect x="475" y="255" width="235" height="115" rx="12" fill="rgba(247,129,102,0.1)" stroke="rgba(247,129,102,0.35)"/>
+  <text x="592" y="298" fill="#f78166" font-family="sans-serif" font-size="28" font-weight="bold" text-anchor="middle">+5% Higher</text>
+  <text x="592" y="325" fill="#c9d1d9" font-family="sans-serif" font-size="12" text-anchor="middle">Avg Engagement on Negative Posts</text>
+  <text x="592" y="347" fill="#8b949e" font-family="monospace" font-size="11" text-anchor="middle">Medium-length posts top ranked</text>
+</svg>

@@ -1,0 +1,886 @@
+<!doctype html>
+<html lang="en" class="dark-theme" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <title>Hasini Portfolio</title>
+    <meta name="description" content="Portfolio of Haribabu Hasini — B.Tech ECE graduate specializing in Python, SQL, Backend Development, ETL Pipelines, and AI/LLM Applications." />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+      * {
+        -webkit-tap-highlight-color: transparent !important;
+        -webkit-touch-callout: none !important;
+        outline: none !important;
+      }
+    </style>
+    <link rel="stylesheet" href="style.css?v=43" />
+  </head>
+  <body class="dark-theme">
+    <div id="root">
+      <div class="app-container">
+        <!-- Navbar -->
+        <header class="modern-navbar dark" id="modern-navbar">
+          <div class="navbar-container">
+            <div class="navbar-brand">
+              <button class="mobile-menu-trigger" id="mobile-menu-trigger" aria-label="Toggle menu">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h16"/><path d="M4 18h16"/><path d="M4 6h16"/></svg>
+              </button>
+              <div class="brand-logo" id="brand-logo-btn" style="cursor: pointer;">
+                <div class="portfolio-logo">
+                  <div class="logo-icon">
+                    <span class="logo-text">H</span>
+                  </div>
+                </div>
+                <span class="brand-text">Hasini</span>
+              </div>
+            </div>
+
+            <div class="navbar-center">
+              <nav class="nav-menu" id="desktop-nav">
+                <button class="nav-item active" data-view="overview">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                  <span>Overview</span>
+                </button>
+                <button class="nav-item" data-view="projects">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m16 18 6-6-6-6"/><path d="m8 6-6 6 6 6"/></svg>
+                  <span>Projects</span>
+                  <span class="nav-badge">3</span>
+                </button>
+                <button class="nav-item" data-view="stars">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"/></svg>
+                  <span>Certificates</span>
+                </button>
+                <button class="nav-item" data-view="outreach">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+                  <span>Community Outreach</span>
+                </button>
+                <button class="nav-item" data-view="contact">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5v14"/></svg>
+                  <span>Contact</span>
+                </button>
+              </nav>
+            </div>
+
+            <div class="navbar-actions">
+              <button class="action-btn theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                <svg id="theme-icon-sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-sun"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+                <svg id="theme-icon-moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-moon" style="display:none;"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+              </button>
+
+              <button class="action-btn notification-btn" id="notification-btn" aria-label="Notifications">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-bell"><path d="M10.268 21a2 2 0 0 0 3.464 0"/><path d="M3.262 15.326A1 1 0 0 0 4 17h16a1 1 0 0 0 .74-1.673C19.41 13.956 18 12.499 18 8A6 6 0 0 0 6 8c0 4.499-1.411 5.956-2.738 7.326"/></svg>
+                <span class="notification-dot"></span>
+              </button>
+
+              <div class="profile-section" id="profile-section">
+                <button class="profile-trigger" id="profile-trigger" aria-label="Profile menu">
+                  <img src="assets/passport_pic.png" alt="Hasini" class="avatar" />
+                </button>
+                <div class="profile-dropdown" id="profile-dropdown" style="display: none;">
+                  <div class="dropdown-header">
+                    <img src="assets/passport_pic.png" alt="Hasini" class="dropdown-avatar" />
+                    <div class="dropdown-user-info">
+                      <span class="dropdown-username">Haribabu Hasini</span>
+                      <span class="dropdown-status">Open to Opportunities</span>
+                    </div>
+                  </div>
+                  <div class="dropdown-menu">
+                    <a href="assets/Hasini_Resume.pdf?v=2" target="_blank" class="dropdown-item">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 15V3"/><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/></svg>
+                      <span>Download Resume</span>
+                    </a>
+                    <a href="https://github.com/hasini30" target="_blank" rel="noopener noreferrer" class="dropdown-item">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+                      <span>GitHub Profile</span>
+                      <svg class="external-icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+                    </a>
+                    <a href="https://www.linkedin.com/in/hasini-nadella30/" target="_blank" rel="noopener noreferrer" class="dropdown-item">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+                      <span>LinkedIn</span>
+                      <svg class="external-icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </header>
+
+        <!-- Mobile Menu Overlay & Drawer -->
+        <div class="mobile-overlay" id="mobile-overlay"></div>
+        <div class="mobile-menu" id="mobile-menu">
+          <div class="mobile-header">
+            <div class="mobile-brand">
+              <div class="portfolio-logo">
+                <div class="logo-icon">
+                  <span class="logo-text">H</span>
+                </div>
+              </div>
+              <span>Hasini</span>
+            </div>
+            <button class="mobile-close" id="mobile-close" aria-label="Close menu">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+            </button>
+          </div>
+
+          <div class="mobile-user-card">
+            <img src="assets/passport_pic.png" alt="Hasini" class="mobile-avatar" />
+            <div class="mobile-user-info">
+              <h3>Haribabu Hasini</h3>
+              <p>Software &amp; Data Engineer</p>
+            </div>
+          </div>
+
+          <nav class="mobile-nav" id="mobile-nav">
+            <button class="mobile-nav-item active" data-view="overview">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+              <span>Overview</span>
+            </button>
+            <button class="mobile-nav-item" data-view="projects">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m16 18 6-6-6-6"/><path d="m8 6-6 6 6 6"/></svg>
+              <span>Projects</span>
+              <span class="mobile-badge">3</span>
+            </button>
+            <button class="mobile-nav-item" data-view="stars">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"/></svg>
+              <span>Certificates</span>
+            </button>
+            <button class="mobile-nav-item" data-view="outreach">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+              <span>Community Outreach</span>
+            </button>
+            <button class="mobile-nav-item" data-view="contact">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5v14"/></svg>
+              <span>Contact</span>
+            </button>
+          </nav>
+
+          <div class="mobile-actions">
+            <button class="mobile-action" id="mobile-theme-toggle">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+              <span id="mobile-theme-label">Switch to Light Mode</span>
+            </button>
+            <a href="https://github.com/hasini30" target="_blank" rel="noopener noreferrer" class="mobile-action">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+              <span>View GitHub</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Main Layout Container -->
+        <div class="layout-container dark" id="layout-container">
+          <div class="grid-background dark" id="grid-background">
+            <div class="light-rays"></div>
+            <div class="light-emergence"></div>
+            <div class="grid-lines"></div>
+            <div class="grid-dots"></div>
+          </div>
+
+          <div class="layout-content">
+            <div class="content-wrapper">
+
+              <!-- ==================== VIEW 1: OVERVIEW ==================== -->
+              <div id="view-overview" class="tab-view overview-wrapper overview-page-wrapper animate-fade-up">
+                <section class="hero-section">
+                  <div class="hero-container">
+                    <div class="hero-profile animate-fade-up">
+                      <div class="profile-image-wrapper">
+                        <img src="assets/passport_pic.png" alt="Haribabu Hasini" class="profile-image" />
+                        <div class="social-section">
+                          <div class="social-links">
+                            <a href="https://github.com/hasini30" target="_blank" rel="noopener noreferrer" class="social-btn" title="GitHub">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+                            </a>
+                            <a href="https://www.linkedin.com/in/hasini-nadella30/" target="_blank" rel="noopener noreferrer" class="social-btn" title="LinkedIn">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+                            </a>
+                            <a href="mailto:nadellahasini@gmail.com" class="social-btn" title="Email">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="hero-content">
+                      <div class="hero-text animate-fade-up delay-1">
+                        <h1 class="name">Haribabu Hasini</h1>
+                      </div>
+                      <p class="description animate-fade-up delay-2">
+                        B.Tech Graduate @Amrita Vishwa Vidyapeetham
+                      </p>
+                      <div class="hero-actions animate-fade-up delay-3">
+                        <a href="assets/Hasini_Resume.pdf?v=2" target="_blank" download="Hasini_Resume.pdf" class="btn btn-primary">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 15V3"/><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/></svg>
+                          <span>Resume</span>
+                        </a>
+                        <a href="mailto:nadellahasini@gmail.com" class="btn btn-secondary" id="hero-contact-btn">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg>
+                          <span>Contact</span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+
+                <div class="content-sections">
+                  <!-- Education Card -->
+                  <section class="content-card animate-fade-up delay-2">
+                    <div class="card-header">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></svg>
+                      <h2>Education</h2>
+                    </div>
+                    <div class="card-content">
+                      <div class="education-container">
+                        <div class="education-item">
+                          <div class="education-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 22v-4a2 2 0 1 0-4 0v4"/><path d="m18 10 3.447 1.724a1 1 0 0 1 .553.894V20a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-7.382a1 1 0 0 1 .553-.894L6 10"/><path d="M18 5v17"/><path d="m4 6 7.106-3.553a2 2 0 0 1 1.788 0L20 6"/><path d="M6 5v17"/><circle cx="12" cy="9" r="2"/></svg>
+                          </div>
+                          <div class="education-content">
+                            <div class="education-title-row">
+                              <h3>B.Tech in Electronics and Communication Engineering</h3>
+                            </div>
+                            <p class="institution">Amrita Vishwa Vidyapeetham</p>
+                            <div class="education-meta">
+                              <span class="duration">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/></svg>
+                                10/2022 - 07/2026
+                              </span>
+                              <span class="location">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>
+                                Kerala, India
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+
+                  <!-- Skills & Technologies Card -->
+                  <section class="content-card animate-fade-up delay-3">
+                    <div class="card-header">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20v2"/><path d="M12 2v2"/><path d="M17 20v2"/><path d="M17 2v2"/><path d="M2 12h2"/><path d="M2 17h2"/><path d="M2 7h2"/><path d="M20 12h2"/><path d="M20 17h2"/><path d="M20 7h2"/><path d="M7 20v2"/><path d="M7 2v2"/><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="8" y="8" width="8" height="8" rx="1"/></svg>
+                      <h2>Skills &amp; Technologies</h2>
+                    </div>
+                    <div class="skills-container">
+                      <!-- Category 1 -->
+                      <div class="skill-category">
+                        <h3 class="category-title">Programming, Databases &amp; Software Engineering</h3>
+                        <div class="skill-grid">
+                          <div class="skill-item">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" class="skill-icon" />
+                            <span>Python</span>
+                          </div>
+                          <div class="skill-item">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azuresqldatabase/azuresqldatabase-original.svg" alt="SQL" class="skill-icon" />
+                            <span>SQL</span>
+                          </div>
+                          <div class="skill-item">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" class="skill-icon" />
+                            <span>MySQL</span>
+                          </div>
+                          <div class="skill-item">
+                            <img src="https://cdn.simpleicons.org/duckdb/FFF000" alt="DuckDB" class="skill-icon" />
+                            <span>DuckDB</span>
+                          </div>
+                          <div class="skill-item">
+                            <div class="skill-icon-svg"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5V19A9 3 0 0 0 21 19V5"/><path d="M3 12A9 3 0 0 0 21 12"/></svg></div>
+                            <span>DBMS</span>
+                          </div>
+                          <div class="skill-item">
+                            <div class="skill-icon-svg"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/></svg></div>
+                            <span>Query Optimization</span>
+                          </div>
+                          <div class="skill-item">
+                            <div class="skill-icon-svg"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m16 18 6-6-6-6"/><path d="m8 6-6 6 6 6"/></svg></div>
+                            <span>OOP</span>
+                          </div>
+                          <div class="skill-item">
+                            <div class="skill-icon-svg"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="6" x2="6" y1="3" y2="15"/><circle cx="18" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M18 9a9 9 0 0 1-9 9"/></svg></div>
+                            <span>DSA</span>
+                          </div>
+                          <div class="skill-item">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg" alt="REST APIs" class="skill-icon" />
+                            <span>REST APIs</span>
+                          </div>
+                          <div class="skill-item">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" class="skill-icon" />
+                            <span>Git</span>
+                          </div>
+                          <div class="skill-item">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" class="skill-icon github-invert" />
+                            <span>GitHub</span>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Category 2 -->
+                      <div class="skill-category">
+                        <h3 class="category-title">Data Engineering, AI &amp; Tools</h3>
+                        <div class="skill-grid">
+                          <div class="skill-item">
+                            <div class="skill-icon-svg"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z"/><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"/><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"/></svg></div>
+                            <span>ETL Pipelines</span>
+                          </div>
+                          <div class="skill-item">
+                            <div class="skill-icon-svg"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/></svg></div>
+                            <span>Data Cleaning</span>
+                          </div>
+                          <div class="skill-item">
+                            <div class="skill-icon-svg"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" x2="18" y1="20" y2="10"/><line x1="12" x2="12" y1="20" y2="4"/><line x1="6" x2="6" y1="20" y2="14"/></svg></div>
+                            <span>Data Analytics</span>
+                          </div>
+                          <div class="skill-item">
+                            <div class="skill-icon-svg"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 8V4H8"/><rect width="16" height="12" x="4" y="8" rx="2"/><path d="M2 14h2"/><path d="M20 14h2"/><path d="M15 13v2"/><path d="M9 13v2"/></svg></div>
+                            <span>LLM Applications</span>
+                          </div>
+                          <div class="skill-item">
+                            <div class="skill-icon-svg"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4 17 10 11 4 5"/><line x1="12" x2="20" y1="19" y2="19"/></svg></div>
+                            <span>Prompt Engineering</span>
+                          </div>
+                          <div class="skill-item">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" alt="Pandas" class="skill-icon" />
+                            <span>Pandas</span>
+                          </div>
+                          <div class="skill-item">
+                            <div class="skill-icon-svg"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#E97627" stroke-width="2.2"><path d="M12 2v6M9 5h6M12 16v6M9 19h6M2 12h6M5 9v6M16 12h6M19 9v6"/></svg></div>
+                            <span>Tableau</span>
+                          </div>
+                          <div class="skill-item">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/streamlit/streamlit-original.svg" alt="Streamlit" class="skill-icon" />
+                            <span>Streamlit</span>
+                          </div>
+                          <div class="skill-item">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/graphql/graphql-plain.svg" alt="GraphQL" class="skill-icon" />
+                            <span>GraphQL</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              </div>
+
+              <!-- ==================== VIEW 2: PROJECTS ==================== -->
+              <div id="view-projects" class="tab-view about-container-stars" style="display: none;">
+                <div class="about-content">
+                  <div class="projects-header animate-fade-up">
+                    <div class="section-start-title">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 14 1.5-2.9A2 2 0 0 1 9.24 10H20a2 2 0 0 1 1.94 2.5l-1.54 6a2 2 0 0 1-1.95 1.5H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h3.9a2 2 0 0 1 1.69.9l.81 1.2a2 2 0 0 0 1.67.9H18a2 2 0 0 1 2 2v2"/></svg>
+                      <span>Professional Projects</span>
+                    </div>
+                  </div>
+
+                  <div class="projects-filter-container animate-fade-up delay-1">
+                    <div class="projects-filter" id="projects-filter">
+                      <button class="filter-button active" data-filter="all">
+                        <span class="filter-icon">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z"/><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"/><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"/></svg>
+                        </span>
+                        All Projects
+                      </button>
+                    </div>
+                  </div>
+
+                  <div class="projects-grid" id="projects-grid">
+                    <!-- Project 1 -->
+                    <div class="project-card featured animate-fade-up delay-1" data-category="ai">
+                      <div class="project-content">
+                        <div class="project-details">
+                          <h3 class="project-title">Conversational BI Agent for monday.com</h3>
+                          
+                          <div class="project-statement">
+                            <div class="statement-item">
+                              <div class="statement-title">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                                Problem Statement
+                              </div>
+                              <p class="statement-text">
+                                Business leaders and teams need fast, verified analytics from live monday.com boards without writing complex GraphQL queries or manually consolidating fragmented spreadsheet exports.
+                              </p>
+                            </div>
+                            <div class="statement-item">
+                              <div class="statement-title">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                                Outcome
+                              </div>
+                              <p class="statement-text">
+                                Built an AI agent (Python, Streamlit, DuckDB, OpenRouter) with a read-only GraphQL gateway and self-healing SQL loop, enabling natural language queries with verified financial calculations and zero data mutation risk.
+                              </p>
+                            </div>
+                          </div>
+
+                          <div class="project-info">
+                            <div class="info-item">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/></svg>
+                              <span>2026</span>
+                            </div>
+                            <div class="info-item">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.128a4 4 0 0 1 0 7.744"/></svg>
+                              <span>Personal Project</span>
+                            </div>
+                          </div>
+                          <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Streamlit</span>
+                            <span class="tech-tag">DuckDB</span>
+                            <span class="tech-tag">OpenRouter</span>
+                            <span class="tech-tag">GraphQL</span>
+                            <span class="tech-tag more">+2</span>
+                          </div>
+                        </div>
+                        <div class="project-footer">
+                          <div class="project-links">
+                            <a href="https://monday-data-agent.streamlit.app/" target="_blank" rel="noopener noreferrer" class="project-link">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+                              Live App
+                            </a>
+                            <a href="https://github.com/hasini30/skylark-bi-agent" target="_blank" rel="noopener noreferrer" class="project-link">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+                              Source Code
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="project-card featured animate-fade-up delay-2" data-category="data">
+                      <div class="project-content">
+                        <div class="project-details">
+                          <h3 class="project-title">Social Media ETL Pipeline</h3>
+                          
+                          <div class="project-statement">
+                            <div class="statement-item">
+                              <div class="statement-title">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                                Problem Statement
+                              </div>
+                              <p class="statement-text">
+                                Raw social media post feeds are unstructured, unvalidated, and filled with nulls, requiring an automated pipeline to ingest, clean, and reliably store data for audience insights.
+                              </p>
+                            </div>
+                            <div class="statement-item">
+                              <div class="statement-title">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                                Outcome
+                              </div>
+                              <p class="statement-text">
+                                Built an automated Python ETL pipeline loading 500+ posts via REST API into MySQL with 0 duplicates, using 15+ SQL queries to discover that negative posts had ~5% higher engagement.
+                              </p>
+                            </div>
+                          </div>
+                          <div class="project-info">
+                            <div class="info-item">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/></svg>
+                              <span>2025</span>
+                            </div>
+                            <div class="info-item">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.128a4 4 0 0 1 0 7.744"/></svg>
+                              <span>Personal Project</span>
+                            </div>
+                          </div>
+                          <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">SQL</span>
+                            <span class="tech-tag">MySQL</span>
+                            <span class="tech-tag">ETL</span>
+                            <span class="tech-tag">REST APIs</span>
+                            <span class="tech-tag more">+1</span>
+                          </div>
+                        </div>
+                        <div class="project-footer">
+                          <div class="project-links">
+                            <a href="https://github.com/hasini30/social_media_etl_pipeline" target="_blank" rel="noopener noreferrer" class="project-link">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+                              Source Code
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="project-card featured animate-fade-up delay-3" data-category="ai">
+                      <div class="project-content">
+                        <div class="project-details">
+                          <h3 class="project-title">FeedPulse: Personalized Content &amp; Intelligence Dashboard</h3>
+                          
+                          <div class="project-statement">
+                            <div class="statement-item">
+                              <div class="statement-title">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                                Problem Statement
+                              </div>
+                              <p class="statement-text">
+                                Users face digital fatigue switching across fragmented news, cinema, and social feeds, battling ad-heavy web clutter and language barriers with English-only media.
+                              </p>
+                            </div>
+                            <div class="statement-item">
+                              <div class="statement-title">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                                Outcome
+                              </div>
+                              <p class="statement-text">
+                                Engineered a full-stack Next.js 14 dashboard aggregating live streams (RSS, GNews, TMDB, Mastodon) with on-demand AI summarization, 11-language translation, distraction-free reader mode, and real-time Server-Sent Events (SSE).
+                              </p>
+                            </div>
+                          </div>
+
+                          <div class="project-info">
+                            <div class="info-item">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/></svg>
+                              <span>2026</span>
+                            </div>
+                            <div class="info-item">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.128a4 4 0 0 1 0 7.744"/></svg>
+                              <span>Personal Project</span>
+                            </div>
+                          </div>
+                          <div class="project-tech">
+                            <span class="tech-tag">Next.js 14</span>
+                            <span class="tech-tag">TypeScript</span>
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Redux Toolkit</span>
+                            <span class="tech-tag">OpenRouter LLM</span>
+                            <span class="tech-tag">SQLite</span>
+                            <span class="tech-tag">SSE</span>
+                            <span class="tech-tag more">+3</span>
+                          </div>
+                        </div>
+                        <div class="project-footer">
+                          <div class="project-links">
+                            <a href="https://personalized-content-dashboard-3zlf.onrender.com/" target="_blank" rel="noopener noreferrer" class="project-link">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+                              Live App
+                            </a>
+                            <a href="https://github.com/hasini30/personalized-content-dashboard" target="_blank" rel="noopener noreferrer" class="project-link">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+                              Source Code
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- ==================== VIEW 3: CERTIFICATES ==================== -->
+              <div id="view-stars" class="tab-view about-container-stars" style="display: none;">
+                <div class="about-content">
+                  <div class="certificates-header animate-fade-up">
+                    <div class="section-start-title">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526"/><circle cx="12" cy="8" r="6"/></svg>
+                      <span>Professional Certifications</span>
+                    </div>
+                    <p class="certificates-subtitle">
+                      A comprehensive collection of my professional certifications and verified credentials across AI, Data Analytics, SQL, and Python.
+                    </p>
+                  </div>
+
+                  <div class="certificates-filter-container animate-fade-up delay-1">
+                    <div class="certificates-filter" id="certificates-filter">
+                      <button class="filter-button active" data-cert-filter="all">
+                        <span class="filter-icon">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M3 9h18"/><path d="M3 15h18"/><path d="M9 3v18"/><path d="M15 3v18"/></svg>
+                        </span>
+                        All Certificates
+                      </button>
+                    </div>
+                  </div>
+
+                  <div class="certificates-grid" id="certificates-grid">
+                    <!-- Certificate 1: IBM AI Fundamentals -->
+                    <div class="certificate-card animate-fade-up delay-1" data-cert-type="ai" data-url="https://www.credly.com/badges/84180283-c210-4241-bd58-4713253744be/linked_in_profile">
+                      <div class="certificate-header">
+                        <div class="certificate-icon">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/><rect width="20" height="14" x="2" y="6" rx="2"/></svg>
+                        </div>
+                        <div class="certificate-titles">
+                          <h3 class="certificate-name">AI Fundamentals: Foundations for Understanding AI</h3>
+                          <span class="certificate-issuer">IBM</span>
+                        </div>
+                      </div>
+                      <div class="certificate-content">
+                        <div class="certificate-footer">
+                          <span class="view-cert-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+                            <span>View Certificate</span>
+                          </span>
+                          <div class="certificate-skills">
+                            <span class="mini-tag">Generative AI</span>
+                            <span class="mini-tag">ML</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Certificate 2: Deloitte Data Analytics -->
+                    <div class="certificate-card animate-fade-up delay-2" data-cert-type="ai" data-url="https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/9PBTqmSxAf6zZTseP/io9DzWKe3PTsiS6GG_9PBTqmSxAf6zZTseP_2f3onffMb9TXSYtee_1745313901064_completion_certificate.pdf">
+                      <div class="certificate-header">
+                        <div class="certificate-icon">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/><rect width="20" height="14" x="2" y="6" rx="2"/></svg>
+                        </div>
+                        <div class="certificate-titles">
+                          <h3 class="certificate-name">Data Analytics Job Simulation</h3>
+                          <span class="certificate-issuer">Deloitte Australia (Forage)</span>
+                        </div>
+                      </div>
+                      <div class="certificate-content">
+                        <div class="certificate-footer">
+                          <span class="view-cert-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+                            <span>View Certificate</span>
+                          </span>
+                          <div class="certificate-skills">
+                            <span class="mini-tag">Data Analytics</span>
+                            <span class="mini-tag">Tableau</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Certificate 3: SQL Advanced HackerRank -->
+                    <div class="certificate-card animate-fade-up delay-3" data-cert-type="database" data-url="https://www.hackerrank.com/certificates/e1faa25031a6">
+                      <div class="certificate-header">
+                        <div class="certificate-icon">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21.801 10A10 10 0 1 1 17 3.335"/><path d="m9 11 3 3L22 4"/></svg>
+                        </div>
+                        <div class="certificate-titles">
+                          <h3 class="certificate-name">SQL (Advanced)</h3>
+                          <span class="certificate-issuer">HackerRank</span>
+                        </div>
+                      </div>
+                      <div class="certificate-content">
+                        <div class="certificate-footer">
+                          <span class="view-cert-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+                            <span>View Certificate</span>
+                          </span>
+                          <div class="certificate-skills">
+                            <span class="mini-tag">Window Functions</span>
+                            <span class="mini-tag">Optimization</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Certificate 4: Python Essentials 1 Cisco -->
+                    <div class="certificate-card animate-fade-up delay-4" data-cert-type="programming" data-url="https://www.credly.com/badges/3304b0ed-ba63-4ab7-8bdf-f384fb2b418e/linked_in_profile">
+                      <div class="certificate-header">
+                        <div class="certificate-icon">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 7v14"/><path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/></svg>
+                        </div>
+                        <div class="certificate-titles">
+                          <h3 class="certificate-name">Python Essentials 1</h3>
+                          <span class="certificate-issuer">Cisco</span>
+                        </div>
+                      </div>
+                      <div class="certificate-content">
+                        <div class="certificate-footer">
+                          <span class="view-cert-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+                            <span>View Certificate</span>
+                          </span>
+                          <div class="certificate-skills">
+                            <span class="mini-tag">Python</span>
+                            <span class="mini-tag">Algorithms</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- ==================== VIEW 4: COMMUNITY OUTREACH ==================== -->
+              <div id="view-outreach" class="tab-view about-container-stars" style="display: none;">
+                <div class="about-content">
+                  <div class="experience-header animate-fade-up">
+                    <div class="section-start-title">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+                      <span>Community Outreach</span>
+                    </div>
+                    <p class="experience-subtitle">
+                      Giving back to the community through student mentorship and mental health awareness initiatives.
+                    </p>
+                  </div>
+
+                  <div class="content-sections animate-fade-up delay-1" style="margin-top: 1.5rem;">
+                    <section class="content-card">
+                      <div class="card-header">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+                        <h2>Community Outreach</h2>
+                      </div>
+                      <div class="card-content">
+                        <div class="education-container">
+                          <div class="education-item">
+                            <div class="education-icon">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.128a4 4 0 0 1 0 7.744"/></svg>
+                            </div>
+                            <div class="education-content">
+                              <div class="education-title-row">
+                                <h3>Mental Health Awareness</h3>
+                              </div>
+                              <p class="institution">NSS HSS Karuvatta, Karunagapally</p>
+                              <p style="margin-bottom: 12px;">Delivered interactive mental health awareness sessions for 10th grade students at NSS HSS Karuvatta, in collaboration with subject experts.</p>
+                              <div class="education-meta" style="margin-bottom: 14px;">
+                                <span class="duration">
+                                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/></svg>
+                                  2024
+                                </span>
+                                <span class="location">
+                                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>
+                                  Karunagapally, Kerala
+                                </span>
+                              </div>
+                              <div class="preview-tech">
+                                <span class="tech-chip">Community Outreach</span>
+                                <span class="tech-chip">Mental Health Awareness</span>
+                                <span class="tech-chip">Student Mentorship</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </div>
+              </div>
+
+              <!-- ==================== VIEW 5: CONTACT ==================== -->
+              <div id="view-contact" class="tab-view about-container-stars" style="display: none;">
+                <div class="about-content">
+                  <div class="contact-header animate-fade-up">
+                    <div class="section-start-title">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg>
+                      <span>Get In Touch</span>
+                    </div>
+                    <p class="contact-subtitle">
+                      Ready to collaborate or have questions? I'd love to hear from you. Let's build something amazing together.
+                    </p>
+                  </div>
+
+                  <div class="contact-main">
+                    <div class="contact-form-section animate-fade-up delay-1">
+                      <div class="form-header">
+                        <h2>Send Message</h2>
+                        <p>Fill out the form and I'll get back to you within 24 hours.</p>
+                      </div>
+                      <form class="contact-form" id="contact-form">
+                        <div class="form-grid">
+                          <div class="form-group">
+                            <label for="name">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                              Name *
+                            </label>
+                            <input type="text" id="name" name="name" placeholder="Your full name" required />
+                          </div>
+                          <div class="form-group">
+                            <label for="email">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg>
+                              Email *
+                            </label>
+                            <input type="email" id="email" name="email" placeholder="your.email@example.com" required />
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label for="subject">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                            Subject *
+                          </label>
+                          <input type="text" id="subject" name="subject" placeholder="What's this about?" required />
+                        </div>
+                        <div class="form-group">
+                          <label for="message">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                            Message *
+                          </label>
+                          <textarea id="message" name="message" placeholder="Tell me more about your project or inquiry..." rows="6" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn" id="submit-btn">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z"/><path d="m21.854 2.147-10.94 10.939"/></svg>
+                          <span>Send Message</span>
+                        </button>
+                        <div class="success-message" id="form-success" style="display: none;">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+                          <span>Thanks for reaching out! I'll get back to you soon.</span>
+                        </div>
+                      </form>
+                    </div>
+
+                    <div class="contact-info-section animate-fade-up delay-2">
+                      <div class="info-header">
+                        <h2>Social Connect?</h2>
+                        <p>Prefer a more direct approach? Here are other ways to reach me.</p>
+                      </div>
+                      <div class="social-links-section">
+                        <div class="social-links-grid">
+                          <a href="https://github.com/hasini30" target="_blank" rel="noopener noreferrer" class="social-link" style="--social-color: #736868ff;">
+                            <div class="social-icon">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+                            </div>
+                            <div class="social-info">
+                              <span class="social-name">GitHub</span>
+                              <span class="social-handle">@hasini30</span>
+                            </div>
+                            <svg class="social-external" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+                          </a>
+
+                          <a href="https://www.linkedin.com/in/hasini-nadella30/" target="_blank" rel="noopener noreferrer" class="social-link" style="--social-color: #0077b5;">
+                            <div class="social-icon">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+                            </div>
+                            <div class="social-info">
+                              <span class="social-name">LinkedIn</span>
+                              <span class="social-handle">@hasini-nadella30</span>
+                            </div>
+                            <svg class="social-external" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+                          </a>
+
+                          <a href="mailto:nadellahasini@gmail.com" class="social-link" style="--social-color: #f78166;">
+                            <div class="social-icon">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg>
+                            </div>
+                            <div class="social-info">
+                              <span class="social-name">Email</span>
+                              <span class="social-handle">nadellahasini@gmail.com</span>
+                            </div>
+                            <svg class="social-external" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+                          </a>
+
+                          <a href="tel:+918106764574" class="social-link" style="--social-color: #22c55e;">
+                            <div class="social-icon">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                            </div>
+                            <div class="social-info">
+                              <span class="social-name">Phone</span>
+                              <span class="social-handle">+91 8106764574</span>
+                            </div>
+                            <svg class="social-external" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js?v=43"></script>
+  </body>
+</html>
